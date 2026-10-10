@@ -11,7 +11,7 @@ venv/
 *.ipynb_checkpoints
 
 # Data (uncomment to exclude dataset from version control)
-# *.csv
+*.csv
 
 # OS
 .DS_Store

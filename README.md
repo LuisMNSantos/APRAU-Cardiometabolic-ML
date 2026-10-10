@@ -83,14 +83,6 @@ scikit-learn
 jupyter
 ```
 
-## Setup
-
-```bash
-git clone <repo-url>
-cd Projeto
-pip install -r requirements.txt
-jupyter notebook
-```
 
 ## Group
 
