@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (uncomment to exclude dataset from version control)
+# *.csv
+
+# OS
+.DS_Store
+Thumbs.db
