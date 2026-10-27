@@ -13,13 +13,11 @@ This project applies classical machine learning methods to a clinical dataset of
 
 ```
 Projeto/
-├── dataset_grupo_18.csv          # Dataset (2000 patient records)
-├── Trabalho_APRAU_2026_27_step1.pdf  # Assignment specification
-├── notebooks/                    # Jupyter notebooks
-│   ├── 1_eda.ipynb               # Exploratory Data Analysis
-│   ├── 2_regression.ipynb        # Regression models
-│   ├── 3_classification.ipynb    # Classification models
-│   └── 4_feature_selection.ipynb # Feature selection (Ridge & Lasso)
+├── dataset_grupo_18.csv                  # Dataset (2000 patient records, excluded from VCS)
+├── Trabalho_APRAU_2026_27_step1.pdf      # Assignment specification
+├── notebooks/
+│   └── aprau_grupo18.ipynb               # Main project notebook (all tasks)
+├── requirements.txt
 └── README.md
 ```
 
@@ -29,7 +27,9 @@ Projeto/
 - Descriptive statistics
 - Univariate analysis (distribution of individual features)
 - Bivariate analysis (correlations between features and target variables)
-- Identification of uninformative, constant, or redundant features
+- Identification and removal of uninformative, constant, or redundant features
+- Multicollinearity assessment via VIF
+- Data treatment and export of cleaned dataset
 
 ### 2. Regression — predicting `target_regression`
 - **Simple Linear Regression** — single feature selection and evaluation
@@ -40,13 +40,15 @@ Projeto/
 - Methods: **Logistic Regression** and **Discriminant Analysis (LDA)**
 - Resampling strategies:
   - Holdout
-  - Cross-Validation (k=5 and k=10)
+  - Stratified Cross-Validation (k=5 and k=10)
   - Leave-One-Out Cross-Validation (LOOCV)
-  - Bootstrap
+  - Bootstrap (OOB estimate)
 - Analysis of how variance is affected by each resampling method
 
 ### 4. Feature Selection
-- Regularization methods: **Ridge** and **Lasso**
+- Regularization methods: **Ridge** (L2), **Lasso** (L1), and **Elastic Net** (L1+L2)
+- Automatic hyperparameter tuning via cross-validation (`RidgeCV`, `LassoCV`, `ElasticNetCV`)
+- Post-selection VIF analysis
 - Comparison between full-feature and reduced-feature models
 - Discussion of impact on classification performance
 
@@ -80,9 +82,15 @@ pandas
 matplotlib
 seaborn
 scikit-learn
+scipy
 jupyter
 ```
 
+Install with:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Group
 
