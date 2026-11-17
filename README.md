@@ -13,10 +13,17 @@ This project applies classical machine learning methods to a clinical dataset of
 
 ```
 Projeto/
-├── dataset_grupo_18.csv                  # Dataset (2000 patient records, excluded from VCS)
-├── Trabalho_APRAU_2026_27_step1.pdf      # Assignment specification
+├── APRAU_Groups_26_27_v24out.pdf         # List of groups
+├── Entrega1/                             # 1st delivery (2/11)
+│   ├── Trabalho_APRAU_2026_27_step1.pdf  # Assignment specification (step 1)
+│   ├── APRAU_DEN_D_*.zip                 # Submitted package
+│   └── Apresentacoes/                    # Presentation/defense schedule
+├── Entrega2/                             # 2nd delivery (20/12, to be confirmed)
+│   └── Trabalho_APRAU_2026_27_step1_e_setp2.pdf  # Assignment specification (steps 1 + 2)
 ├── notebooks/
-│   └── aprau_grupo18.ipynb               # Main project notebook (all tasks)
+│   ├── aprau_grupo18.ipynb               # Main project notebook (all tasks)
+│   ├── dataset_grupo_18.csv              # Dataset (2000 patient records, excluded from VCS)
+│   └── dataset_grupo_18_cleaned.csv      # Cleaned dataset exported by the notebook
 ├── requirements.txt
 └── README.md
 ```
