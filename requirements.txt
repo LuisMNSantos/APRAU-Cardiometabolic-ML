@@ -5,4 +5,5 @@ seaborn
 scikit-learn
 scipy
 statsmodels
+pygam==0.12.0
 jupyter
