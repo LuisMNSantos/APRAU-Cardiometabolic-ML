@@ -1,13 +1,13 @@
-# Cardiometabolic Disease Prediction — APRAU 2026/27
+# Cardiometabolic Disease Prediction: APRAU 2026/27
 
-**Machine Learning assignment** for the course *Aprendizagem Automática* (APRAU), MEI — ISEP, 2026/2027.
+**Machine Learning assignment** for the course *Aprendizagem Automática* (APRAU), MEI, ISEP, 2026/2027.
 
 ## Overview
 
 This project applies classical machine learning methods to a clinical dataset of **2,000 patient records** derived from a cardiometabolic disease screening program. The dataset contains demographic, anthropometric, lifestyle, and laboratory biomarker features, with two target variables:
 
-- `target_class` — categorical diagnosis label (classification task)
-- `target_regression` — continuous laboratory biomarker (regression task)
+- `target_class`: categorical diagnosis label (classification task)
+- `target_regression`: continuous laboratory biomarker (regression task)
 
 ## Project Structure
 
@@ -38,12 +38,12 @@ Projeto/
 - Multicollinearity assessment via VIF
 - Data treatment and export of cleaned dataset
 
-### 2. Regression — predicting `target_regression`
-- **Simple Linear Regression** — single feature selection and evaluation
-- **Multiple Linear Regression** — feature combination exploration
+### 2. Regression: predicting `target_regression`
+- **Simple Linear Regression**: single feature selection and evaluation
+- **Multiple Linear Regression**: feature combination exploration
 - Evaluation: R², MAE, RMSE (holdout method)
 
-### 3. Classification — predicting `target_class`
+### 3. Classification: predicting `target_class`
 - Methods: **Logistic Regression** and **Discriminant Analysis (LDA)**
 - Resampling strategies:
   - Holdout
@@ -90,6 +90,8 @@ matplotlib
 seaborn
 scikit-learn
 scipy
+statsmodels
+pygam==0.12.0
 jupyter
 ```
 
@@ -101,4 +103,4 @@ pip install -r requirements.txt
 
 ## Group
 
-ISEP | MEI | APRAU | 2026/2027 — Group 18
+ISEP | MEI | APRAU | 2026/2027 | Group 18
