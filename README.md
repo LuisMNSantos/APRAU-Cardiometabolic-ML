@@ -20,6 +20,7 @@ Projeto/
 │   └── Apresentacoes/                    # Presentation/defense schedule
 ├── Entrega2/                             # 2nd delivery (20/12, to be confirmed)
 │   └── Trabalho_APRAU_2026_27_step1_e_setp2.pdf  # Assignment specification (steps 1 + 2)
+├── .github/                              # CI workflow, repo checks and CODEOWNERS
 ├── notebooks/
 │   ├── aprau_grupo18.ipynb               # Main project notebook (all tasks)
 │   ├── dataset_grupo_18.csv              # Dataset (2000 patient records, excluded from VCS)
@@ -82,24 +83,20 @@ Projeto/
 
 ## Requirements
 
-```
-python >= 3.10
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-scipy
-statsmodels
-pygam==0.12.0
-jupyter
-```
-
-Install with:
+Python 3.11 with the versions pinned in `requirements.txt` (the group's Anaconda environment): numpy 1.24.3, pandas 2.0.3, matplotlib 3.7.2, seaborn 0.12.2, scikit-learn 1.3.0, scipy 1.11.1, statsmodels 0.14.0 and pygam 0.12.0. Install with:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+## Continuous Integration and merge rules
+
+Every pull request to `master` runs the workflow in `.github/workflows/ci.yml`:
+
+1. **checks**: every notebook is a valid `.ipynb`, there are no merge conflict markers, and there are no en dashes, em dashes, middle dots or minus signs in the tracked text files (run locally with `python .github/scripts/check_repo.py`).
+2. **notebook**: installs `requirements.txt`, takes the dataset from the Entrega 1 zip and runs the whole notebook (Restart & Run All). The executed notebook is attached to the run as the `notebook-executado` artifact, so reviewers can see the outputs without running it.
+
+`master` is protected: changes go in through pull requests, both checks must pass, the branch must be up to date with `master`, and the repository owner (`.github/CODEOWNERS`) must approve.
 
 ## Group
 
